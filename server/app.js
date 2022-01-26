@@ -1,15 +1,17 @@
-const { parse } = require("csv-parse");
-
 const express = require("express");
+const compression = require("compression");
+const planetsRouter = require("./routes/planets/planets.router");
+const cors = require("cors");
 
 const app = express();
-const compression = require("compression");
 
-const PORT = process.env.PORT || 3001;
-
-app.use(morgan("dev"));
+app.use(express.json());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 app.use(compression());
+app.use(planetsRouter);
 
-app.listen(PORT, () => {
-  console.log(`Listening on ${PORT} on localhost:${PORT}`);
-});
+module.exports = app;
