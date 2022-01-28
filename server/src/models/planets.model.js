@@ -15,7 +15,7 @@ function isHabitablePlanet(planet) {
 
 function loadPlanetsData() {
   return new Promise((resolve, reject) => {
-    fs.createReadStream(path.join(__dirname, "..", "data", "space.csv"))
+    fs.createReadStream(path.join(__dirname, "..", "..", "data", "space.csv"))
       .pipe(
         parse({
           comment: "#",
@@ -42,3 +42,5 @@ module.exports = {
   planets: habitablePlanets,
   loadPlanetsData,
 };
+
+console.log(habitablePlanets);

@@ -1,0 +1,23 @@
+{
+  "name": "planets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm start --prefix server", 
+    "client": "npm start --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm run server & npm run client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deveshp530/exploreSpace.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deveshp530/exploreSpace/issues"
+  },
+  "homepage": "https://github.com/deveshp530/exploreSpace#readme"
+}

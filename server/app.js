@@ -1,6 +1,7 @@
 const express = require("express");
 const compression = require("compression");
-const planetsRouter = require("./routes/planets/planets.router");
+const planetsRouter = require("./src/planets/planets.router");
+
 const cors = require("cors");
 
 const app = express();

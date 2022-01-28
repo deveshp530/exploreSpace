@@ -2,7 +2,7 @@ const app = require("./app");
 
 const PORT = process.env.PORT || 3001;
 
-const { loadPlanetsData } = require("./models/planets.model");
+const { loadPlanetsData } = require("./src/models/planets.model");
 
 async function startServer() {
   await loadPlanetsData();
